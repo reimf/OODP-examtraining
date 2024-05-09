@@ -1,0 +1,11 @@
+// Ignore all compilation artifacts
+bin/
+obj/
+
+// Ignore all Visual Studio Code solution files
+*.sln
+
+// Ignore all C# files except Program.cs and templates
+*.cs
+!Program.cs
+!Template*.cs

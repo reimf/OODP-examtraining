@@ -1,0 +1,14 @@
+Study the class OneTimeReader in TemplateOneTimeReader.cs.
+As you can see, an OneTimeReader is initialized with an array of strings
+and the only method is ReadNext.
+The first call to ReadNext returns the first string in the array,
+the second call the second, and so on.
+When all the strings are returned, the method returns null for all subsequent calls.
+
+Create a static class LengthCounter.
+
+Add a method LengthUsingWhile that takes an OneTimeReader as parameter.
+The method should returns the number of string in a OneTimeReader using a while loop.
+
+Add a method LengthUsingRecursion that takes an OneTimeReader as parameter.
+The method should returns the number of string in a OneTimeReader using recursion.

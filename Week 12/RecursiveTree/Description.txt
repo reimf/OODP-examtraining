@@ -1,0 +1,20 @@
+Create a class Person with 4 properties that can only be set in the class and not read outside of the class.
+Call them Name, YearOfBirth, Mother and Father.
+Mother and Father are of type Person.
+
+Add a constructor that takes 4 parameters (name, year, mother, father) in the order provided
+and set the values of the properties accordingly.
+
+Override the ToString() method in the class to return a string in the following format:
+"Name (child of Mother and Father)" if the person has 2 known parents,
+"Name (child of ...)" if the person has only 1 known parent, or
+"Name" if the person has no known parents.
+So if someone only has a known mother with 2 known grandparents, the string should be:
+"Name (child of Mother (child of Grandmother and Grandfather))"
+Hint 1: use recursion.
+Hint 2: create a list of strings parentNames to store the names of known parents.
+Hint 3: use string.Join(" and ", parentNames) to create the string with the name(s) of the parent(s).
+
+Add a method AncestorsBornAfter(int year) that returns a list of all ancestors (including the person itself) born after the given year.
+Hint 1: use recursion.
+Hint 2: you can add all elements of a list to another list with the list.AddRange(otherList) method. 

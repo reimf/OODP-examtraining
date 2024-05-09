@@ -1,0 +1,15 @@
+Create a class Employee.
+
+Add properties FirstName and LastName that can be read and set anywhere.
+Setting the first name to a name that is less than 3 characters
+should add a question mark at the end.
+So setting it to "Bo" should set the first name equal to "Bo?".
+The last name should be "Onbekend" if it is set to the empty string.
+
+Add a constructor that accepts the two name parts as parameters
+and set the corresponding properties.
+
+Override the method ToString to produce the full name.
+
+Implement the interface IComparable by comparing two employees on their last name
+and if the last name is the same, then on first name.

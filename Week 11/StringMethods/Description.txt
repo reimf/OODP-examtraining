@@ -1,0 +1,13 @@
+Create a class PasswordChecker without fields, properties and constructors.
+
+Add a method IsStrong that takes a string and by default returns true.
+
+Now one by one, add the following checks to weed out weak passwords.
+
+a. The password must not be null or empty.
+b. The password must have the character 'A' in it.
+c. The password must not start nor end with a white-space character.
+d. The password must contain exactly 3 dashes ('-'); hint: use the Split method.
+e. The password length must be at least 6.
+f. The third, fourth and/or fifth character must be a '#'; hint: use the Substring method.
+g. The password must contain a lowercase character; hint: use the ToUpper or ToLower method.

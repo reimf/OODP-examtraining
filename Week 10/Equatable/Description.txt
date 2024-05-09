@@ -1,0 +1,27 @@
+Write a class Visitor.
+
+Add a property Barcode.
+The Barcode could be read from anywhere but can only be set in this class.
+Make sure Barcode is always set to a string of length 10.
+If Barcode is set to a string of another size, set the value to a string with 10 zero's.
+
+Provide a constructor that takes a barcode as parameter and set the corresponding property.
+
+Override the method ToString with a method that returns "bezoeker 1234567890"
+for a visitor with Barcode 1234567890.
+
+Add a method NumberOfDifferences with one parameter: an other visitor.
+This method computes the number of digits that are different in the two barcodes.
+E.g. barcode 1111111111 differs from 1112111816 in 3 digits
+and 1111111111 differs from 1111411171 in 2 digits.
+Hint: use a for-loop.
+
+Make Visitor implement the interface IEquatable such that it can be compared to any object.
+Suppose the barcode scanner is unreliable and sometimes misreads 1 digit, sometimes 2, but never more.
+Two visitors are equal if the barcodes only differ in at most 2 digits.
+E.g. barcode 1111111111 differs from 1112111816 in 3 digits so they are not equal
+and 1111111111 differs from 1111411171 in 2 digits so they are equal.
+Hint: also handle null values.
+
+Override the == and the != operator in such a way that two visitors are equal
+if the barcodes only differ in at most 2 digits.

@@ -1,0 +1,29 @@
+Create a class YearCalender.
+
+Add a property Year that can be read from anywhere but only set within the class.
+
+Add a constructor that takes a year and set the corresponding property.
+Add a public field Holidays that contains a boolean for every month and day of the year
+indicating whether it is a holiday or not.
+Give Holidays the right amount of months, but don't add the days yet;
+hint: use the right type of array.
+
+Add a method MonthLength with a parameter month (1 <= month <= 12)
+and return the number of days in that month;
+hint: use your BaseCamp knowledge on leap years.
+Return 0 if the month is invalid;
+
+Add a method IsValidDay that takes a month and a day
+and return whether the day is a valid day in this year.
+
+Add a method FillHolidays that fills each month in the array Holidays
+with the correct amount of days.
+
+Add a method AddHoliday that takes a month and a day.
+If it is a valid day in this year set the appropiate day to a holiday.
+Return whether the day is a valid day.
+
+Add a method IsValidHoliday that takes a month and a day.
+It always returns 2 values, one named isValidDay and one named isHoliday.
+If it is not a valid day, then set isHoliday to false.
+Otherwise get the value isHoliday from the array of holidays. 

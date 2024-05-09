@@ -1,0 +1,21 @@
+Create a generic class ArrayPrinter that works on type T.
+
+Add a field Array that is an array of type T.
+This field may only be set in the constructor and is not readable from outside the class.
+
+Add a constructor that has an array of type T as parameter and set the corresponding field.
+
+Add a method WriteUsingForeach that writes the elements of Array separated with a space.
+So if Array is an array containing strings "a", "b" and "c" then this method will write "a b c".
+Use a foreach loop.
+
+Add a method WriteUsingRecursion that writes the element of Array separated with a space.
+This method has a parameter index that indicates where to start writing the array.
+Use recursion.
+Hint: what is the easiest array to write? how can you write a small part followed by the rest?
+
+Add a method ConcatUsingForeach that returns a string containing the elements of Array separated with a space.
+
+Add a method ConcatUsingRecursion that returns a string containing the elements of Array separated with a space.
+This method also has a parameter index that indicates where to start concatting.
+Use recursion.

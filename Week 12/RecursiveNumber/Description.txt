@@ -1,0 +1,21 @@
+Copy the file TemplateSpeaker.cs to Speaker.cs and rename the class to Speaker.
+
+The method Speak should return the correct pronounciation of the number in Dutch.
+So if the number is 12, then the method should return "twaalf".
+
+Currently the method Speak always returns "onbekend".
+
+Step 1: enhance the implementation of the method Speak so that it returns the correct pronounciation of the number if the number is contained in the dictionary Base, otherwise return "onbekend".
+Hint: use the method ContainsKey() on the dictionary Base.
+
+Step 2: enhance the implementation of the method Speak so that it also returns the correct pronounciation of the numbers 10, 20, 30, 40, 50, 60, 70, 80 and 90.
+Hint 1: use recursion, so in pronouncing 50, use the fact that Speak already knows how to pronounce 5 and add "tig" .
+Hint 2: if hint 1 doesn't apply (e.g. for 20), add it to the dictionary Base.
+
+Step 3: enhance the implementation of the method Speak such that all numbers from 1 to 99 are pronounced correctly.
+Hint: use recursion, so in pronouncing 64, use the fact that Speak already knows how to pronounce 4 ("vier"), and 60 ("zestig") and add these together with "en" in between.
+
+Step 4 (OPTIONAL): copy the body of the method Speak over the body of the method Speak.
+Enhance the implementation of the method Speak such that all numbers from 1 to 999 are pronounced correctly.
+
+Step 5 (OPTIONAL): enhance the implementation of the method Speak such that all numbers from 1 to 999_999 are pronounced correctly.

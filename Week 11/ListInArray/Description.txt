@@ -1,0 +1,31 @@
+Note: It's not allowed to use a list anywhere in the assignment!
+ 
+Make a class called FakeList that takes a generic.
+In the class make a private array of the generic`with name Array.
+Set the array directly to a new array of length 1.
+
+Make a readonly property Capacity that returns the length of Array.
+
+Make a property Count that represents the number of elements that are pushed to Array.
+This property may be read everywhere but only written to within the class.
+Remember that the default value of an int property is 0.
+ 
+Create a method Push that takes a parameter of type T.
+If Array is full,
+then first create a new array with double the current capacity,
+copy all existing values from Array to the new array
+and assign the new array to Array.
+Put the new value in the right position in Array and increase Count.
+ 
+Create a method Peek that returns the last value of Array
+or the default value of T if Array is empty.
+
+Create a method Pop that returns the last value in Array.
+This method stores the last value in Array in a temporary variable
+and decreases Count.
+If Array is only half full,
+then create a new array of half the current capacity
+and copy all values from Array to the new array
+and assign the new array to Array.
+Make sure the capacity is always at least 1.
+Hint: also handle the case where there are no elements in Array by only returning the default value.
