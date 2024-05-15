@@ -1,29 +1,29 @@
-Create a class MyList of generic type T.
+Read the class MyList of generic type T in TemplateMyList.cs.
+Note that this class implements IEnumerable<T>
+and only provides the method Add to add an item.
 
-Add a field Items that is a list of type T that is initialized to an empty list.
-Make the field only accessible to the class and such that it can not be changed after the constructor exits.
+Create a static class Processor.
 
-Create a method Add that adds an item to the list.
-
-Create a method ToString that returns all the items in the list separated by a comma.
-Hint: use the string.Join(separator, list) method.
-
-Create a method Map that takes a function as a parameter.
-That function has a value of type T as a parameter and returns a value of type U.
-The method Map applies the function to each item in the list of Items
+Create a method Map that takes a MyList of type T and a function as parameters.
+The function parameter has a value of type T as a parameter and returns a value of type U.
+The method Map applies the function to each item in the MyList
 and returns a new MyList with the results.
 
-Create a method Filter that takes a function as a parameter.
-That function has a value of type T as a parameter and returns a boolean.
-The method Filter applies the function to each item in the list of Items
+Create a method Filter that takes a MyList of type T and a function as parameters.
+The function parameter has a value of type T as a parameter and returns a boolean.
+The method Filter applies the function to each item in the MyList
 and returns a new MyList with only the items for which the function returns true.
 
-Create a method Reduce that takes a function as a parameter and an initial value of type T.
-That function has two values of type T as parameters and returns a value of type T.
+Create a method Reduce that takes a MyList of type T,
+a function and an initial value of type U as parameters
+and returns a value of type U.
+The function parameter has values of type U and T as parameters and returns a value of type U.
 The method Reduce first sets the intermediate result to the initial value.
-Then method Reduce loops over each item in the list of Items
+Then method Reduce loops over each item in the MyList
 and applies the function to the intermediate result and the current item
 and sets the result to the intermediate result.
 After the loop the method returns the result.
-Hint 1: to compute the sum of a MyList of integers, you would write myList.Reduce((r, n) => r + n, 0)
-Hint 2: to compute the minimum of a MyList of integers, you would write myList.Reduce((r, n) => Math.Min(r, n), int.MaxValue)
+Hint 1: to compute the sum of a MyList of integers, you would write
+Processor.Reduce(myList, (r, n) => r + n, 0)
+Hint 2: to compute the minimum of a MyList of integers, you would write
+Processor.Reduce(myList, (r, n) => Math.Min(r, n), int.MaxValue)
