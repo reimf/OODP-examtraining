@@ -1,0 +1,25 @@
+Create a class Menu.
+
+Add a readonly field Options as a dictionary to store menu options and the corresponding method that will be invoked when the option is selected.
+The methods that will be invoked don't have any parameters and don't return a value.
+
+Create a private string Descriptions to store the concatenated descriptions of all menu options.
+
+Initialize both fields.
+
+Create a method AddOption that takes three parameters:
+* a string key representing the string that the user has to enter to invoke the corresponding action.
+* a string description describing the option
+* the method to invoke when the option is selected.
+In the method, add the key and action to Options and concatenate the description to Descriptions, ensuring each description is on a new line.
+The string that is added to Descriptions should look like "[1] Say hello".
+
+Create a method Show that has no parameters and no return value.
+In the method, enter an infinte loop.
+In the loop, display Descriptions to show the menu options to the user.
+Also display the string "Please choose an option and press Enter:".
+Read the input from the user and check if the input is valid.
+If the input is valid and the selected method is null, exit the loop.
+Otherwise, invoke the corresponding method.
+If the input is invalid, print the error message "Invalid option, please try again".
+Hint: use the dictionary.ContainsKey method.
