@@ -1,0 +1,21 @@
+Create a class MyStack of generic type T that will implement a stack data structure using a List.
+
+Add a field Items that stores the list of items of type T and initialize it to an empty list.
+Make sure the list can't be read from outside the class
+and can't be assigned a new value after the constructor is called.
+
+Add a method Push that adds an item to the top of the stack, that is the start of the list.
+Hint: use the Items.Insert method that has, respectively,
+an integer parameter and a parameter of type T.
+
+Add a method Pop that removes the item at the top of the stack, that is the start of the list.
+Return that item.
+If the stack is empty, return the default value for type T.
+
+Add a method Peek that returns the item at the top of the stack, that is the start of the list.
+In this method only use the methods Pop and Push.
+
+Add a method ReverseTopElements that has a parameter n
+that reverses the last n elements of the stack, that is the first n elements of the list.
+Do this by using a Queue.
+Hint: use the queue.Enqueue and queue.Dequeue methods. 
