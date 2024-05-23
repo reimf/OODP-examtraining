@@ -1,0 +1,7 @@
+Rename the class TemplateQuestions to Questions.
+
+Find the answers using LINQ.
+Hint: See the class TemplateMushroom for the properties you can use.
+
+Find another interesting question that can be solved using LINQ
+and send it to reimf@hr.nl to add it.
