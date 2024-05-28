@@ -1,0 +1,31 @@
+Create a class WeekDay;
+
+Add a property Name of type string that can be get and set from outside the class.
+
+Add a property NextDay of type WeekDay that can be get and set from outside the class.
+Create a custom setter that sets the NextDay property to the object itself if the value is null.
+So the first WeekDay object that is created has a NextDay property that points to itself.
+
+Sunday --+
+  ^      |
+  |      |
+  +------+
+
+Add a method AddNext with a string parameter that holds the name of the new WeekDay. 
+First find the previous WeekDay by iterating through the NextDay properties
+until you find the WeekDay that has a NextDay property that points to the current WeekDay.
+Then set the value of the NextDay property to a new WeekDay object that points to the current WeekDay.
+
+current = Sunday --> Monday --> Tuesday --+
+            ^                             |
+            |                             |
+            +-----------------------------+
+current.AddNext("Wednesday");
+current == Sunday --> Monday --> Tuesday --> Wednesday --+
+             ^                                           |
+             |                                           |
+             +-------------------------------------------+
+
+
+Create a recursive method ForAll that has 2 parameters (a function that has no parameters and no return value, and a parameter endDay) and no return value.
+Recursively apply the function to all the WeekDay objects until you reach the endDay.
