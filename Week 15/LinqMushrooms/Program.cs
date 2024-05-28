@@ -24,10 +24,16 @@
             Questions.GetScientificNameOfHeaviestMushroom()
         );
         CheckAnswer(
+            "How many types of cap shapes are there?",
+            11,
+            Questions.GetNumberOfCapShapes()
+        );
+        CheckAnswer(
             "The cap shape with the most types of mushrooms",
             "Rond",
             Questions.GetCapShapeWithMostTypesOfMushrooms()
         );
+        Console.WriteLine("All tests passed successfully!");
     }
 
     static void CheckAnswer<T>(string question, T expected, T actual)

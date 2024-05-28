@@ -19,6 +19,9 @@ static class TemplateQuestions
     //What is the scientific name of the heaviest mushroom?
     static string GetScientificNameOfHeaviestMushroom() => default;
 
+    // How many types of cap shapes are there?
+    static int GetNumberOfCapShapes() => default;
+
     //What is the cap shape with the most types of mushrooms?
     static string GetCapShapeWithMostTypesOfMushrooms() => default;
 }
