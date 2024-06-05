@@ -1,0 +1,23 @@
+Create a class Container.
+
+Add field `Boxes` (a two-dimensional array of strings) that can not be accessed from outside the class.
+The first dimension are the pallets and the second dimension are the boxes on each pallet.
+Boxes are placed on the pallets in the order they are added, starting at position 0.
+
+Add a constructor that takes two integer arguments `numPalletsPerContainer` and `numBoxesPerPallet`
+and initialize the `Boxes` field with default values.
+
+Override the `ToString` method to return a string with the pallets as rows and the boxes as columns.
+If a box is empty, display a dot (`.`).
+Add a space (` `) between the boxes.
+
+Add a method `FindPalletAndBox` that takes an integer argument `count` and returns a (pallet, box) tuple
+with the first pallet with enough space for the boxes, and `(-1, -1)` otherwise.
+
+Add a method `AddBoxes` that takes an integer argument `count` and a string argument `content`.
+It returns `false` if there is no pallet with enough space for all the boxes.
+Otherwise it adds the boxes to the first pallet with enough space by setting the value to `content`
+and returns `true`.
+
+Add a method `IsFull` that returns true whether the container is full.
+Hint: Use the `FindPalletAndBox` method.
