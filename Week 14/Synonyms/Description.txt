@@ -1,0 +1,18 @@
+Define a class named `Synonyms`.
+
+Create a private readonly field `_synonyms` of type `Dictionary` that has keys of type `string` and values of type `string`.
+
+Implement a method `Add` with 2 parameters of type `string` to add a synonym pair to the dictionary.
+This method should add both the word and its synonym to the dictionary such that both can be used to retrieve each other.
+
+Implement a method `Get` with 1 parameter of type `string` that returns the synonym of the given word.
+If the word does not exist, it should return null.
+Hint: consider the method `GetValueOrDefault` on a `Dictionary`.
+
+Implement a method `Remove` with 1 parameter of type `string` that removes a word and its synonym from the dictionary.
+
+Implement a method `ToString` that returns a string with the all words in the dictionary, sorted alphabetically, separated by a comma (`,`).
+Hint: consider the property `Keys` on a `Dictionary`.
+
+Implement a method `Replace` with 2 parameters of type `string` that replaces the synonym of an existing word with a new one.
+This should remove both the word and its old synonym, and then add the new synonym pair.
