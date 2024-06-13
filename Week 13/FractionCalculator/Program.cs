@@ -12,11 +12,11 @@
 
         Node subtract4To3Quarters = new Subtract(four, threeQuarters);
         Check("subtract4To3Quarters.ToString()", subtract4To3Quarters, "(4-3/4)");
-        Check("subtract4To3Quarters.Evaluate()", subtract4To3Quarters.Evaluate(), "13/4");
+        Check("subtract4To3Quarters.Evaluate()", subtract4To3Quarters.Evaluate(), "3 1/4");
 
         Node add3QuartersTo3Quarters = new Add(threeQuarters, threeQuarters);
         Check("add3QuartersTo3Quarters.ToString()", add3QuartersTo3Quarters, "(3/4+3/4)");
-        Check("add3QuartersTo3Quarters.Evaluate()", add3QuartersTo3Quarters.Evaluate(), "3/2");
+        Check("add3QuartersTo3Quarters.Evaluate()", add3QuartersTo3Quarters.Evaluate(), "1 1/2");
 
         Node multiply4By3Quarters = new Multiply(four, threeQuarters);
         Check("multiply4By3Quarters.ToString()", multiply4By3Quarters, "(4*3/4)");
@@ -41,14 +41,52 @@
         }
         catch (DivideByZeroException) { }
 
+        Fraction half = new(1, 2);
+        Fraction twoFourth = new(2, 4);
+        Check("half.Equals(otherHalf)", half.Equals(twoFourth), true);
+
+        Fraction oneThird = new(1, 3);
+        Check("half.Equals(oneThird)", half.Equals(oneThird), false);
+
+        Check("half == twoFourth", half == twoFourth, true);
+        Check("half == oneThird", half == oneThird, false);
+
+        Check("half != twoFourth", half != twoFourth, false);
+        Check("half != oneThird", half != oneThird, true);
+
+        Fraction fiveEights = new(5, 8);
+        Check("half.CompareTo(twoFourth)", half.CompareTo(twoFourth), 0);
+        Check("half.CompareTo(oneThird)", half.CompareTo(oneThird), 1);
+        Check("half.CompareTo(fiveEights)", half.CompareTo(fiveEights), -1);
+
+        Check("half > twoFourth", half > twoFourth, false);
+        Check("half > oneThird", half > oneThird, true);
+        Check("half > fiveEights", half > fiveEights, false);
+
+        Check("half < twoFourth", half < twoFourth, false);
+        Check("half < oneThird", half < oneThird, false);
+        Check("half < fiveEights", half < fiveEights, true);
+
+        Check("half >= twoFourth", half >= twoFourth, true);
+        Check("half >= oneThird", half >= oneThird, true);
+        Check("half >= fiveEights", half >= fiveEights, false);
+
+        Check("half <= twoFourth", half <= twoFourth, true);
+        Check("half <= oneThird", half <= oneThird, false);
+        Check("half <= fiveEights", half <= fiveEights, true);
+
+        //Console.WriteLine($"{(Fraction) 3}");
+
         Console.WriteLine("All tests passed successfully!");
     }
 
-    static void Check(string message, object actual, string expected)
+    static void Check(string message, object actual, object expected)
     {
-        if (!actual.ToString().Equals(expected))
+        string actualString = actual.ToString();
+        string expectedString = expected.ToString();
+        if (!actualString.Equals(expectedString))
         {
-            Console.WriteLine($"ERROR: {message}\nExpected: {expected}\nActual: {actual}");
+            Console.WriteLine($"ERROR: {message}\nExpected: {expectedString}\nActual: {actualString}");
             Environment.Exit(1);
         }
     }

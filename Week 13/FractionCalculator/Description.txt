@@ -10,20 +10,30 @@ These fields can only be read in the class itself and cannot be changed.
 Add 2 constructors: one that accepts a numerator and a denominator,
 and another that accepts only a numerator (and has an implicit denominator of 1).
 
-Add the `ToString` method that returns the fraction in the form `a/b` (or `a` if b is 1).
+Add the `ToString` method that returns the fraction in the form
+* `c a/b` such that a < b (7/2 becomes "3 1/2") 
+* `a` if b is 1
+* `a/b` otherwise
 
 Overload the operators `+`, `-`, `*` and `/` for `Fraction` objects.
 Hint 1: these methods look like `public static Fraction operator +(Fraction f1, Fraction f2)`
 Hint 2: remember a/b + c/d = (a*d+b*c)/(b*d), a/b * c/d = (a*c)/(b*d) and a/b / c/d = (a*d)/(b*c)
 
-Add a private method `GCD` that calculates the greatest common divisor of two numbers.
+Add a private method `GreatestCommonDivisor` that calculates the greatest common divisor of two numbers.
 The greatest common divisor is the largest number that divides both numbers without a remainder.
 Calculate this in a recursive way.
 The base case: if the second number is 0, return the first number.
-The recursive case: return the GCD of the second number and the remainder of the first number divided by the second number.
+The recursive case: return the GreatestCommonDivisor of the second number and the remainder of the first number divided by the second number.
 
 Update the constructor so that it simplifies the fraction to its lowest terms.
 In order to do that, divide the numerator and denominator by their greatest common divisor.
 For example: 8/12 becomes 2/3 because the greatest common divisor of 8 and 12 is 4 and 8/4=2 and 12/4=3.
 
 Update the constructor so that it throws a `DivideByZeroException` if the denominator is 0.
+
+Implement the interface `IEquatable` for `Fraction` objects.
+Overload the operator `==` and `!=` for `Fraction` objects.
+
+Implement the interface `IComparable` for `Fraction` objects.
+Hint: a/b > c/d if a*d > b*c
+Overload the operator `>`, `<`, `>=` and `<=` for `Fraction` objects.
